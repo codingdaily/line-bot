@@ -1,8 +1,10 @@
-hash: 2892ef40dd522654698090b4eccaaf5354c76abfa2ed51a584715de38bc66957
-updated: 2018-10-06T23:09:09.886416+07:00
+hash: 70b6ae786a728d314efc0919600f551838b31b3d9c88d265d32e229035d9d485
+updated: 2018-10-07T00:10:39.267863+07:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: ccc981bf80385c528a65fbfdd49bf2d8da22aa23
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/mux
   version: e3702bed27f0d39777b0b37b664b6280e8ef8fbf
 - name: github.com/hashicorp/hcl
@@ -41,6 +43,20 @@ imports:
   version: 298182f68c66c05229eb03ac171abe6e309ee79a
 - name: github.com/spf13/viper
   version: 2c12c60302a5a0e62ee102ca9bc996277c2f64f5
+- name: github.com/zkrhm/httphelper
+  version: 94aea341ef5fca472e77a39eb9cbe844e8084780
+- name: go.uber.org/atomic
+  version: 1ea20fb1cbb1cc08cbd0d913a96dead89aa18289
+- name: go.uber.org/multierr
+  version: 3c4937480c32f4c13a875a1829af76c98ca3d40a
+- name: go.uber.org/zap
+  version: ff33455a0e382e8a81d14dd7c922020b6b5e7982
+  subpackages:
+  - buffer
+  - internal/bufferpool
+  - internal/color
+  - internal/exit
+  - zapcore
 - name: golang.org/x/sys
   version: ee1b12c67af419cf5a9be3bdbeea7fc1c5f32f11
   subpackages:

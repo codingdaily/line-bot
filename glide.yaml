@@ -1,4 +1,4 @@
-package: github.com/zkrhm/the-bot
+package: github.com/zkrhm/ja-bot
 import:
 - package: github.com/mitchellh/go-homedir
   version: ~1.0.0
@@ -8,3 +8,8 @@ import:
   version: ~1.2.1
 - package: github.com/gorilla/mux
   version: ^1.6.2
+- package: github.com/zkrhm/httphelper
+- package: go.uber.org/zap
+  version: ^1.9.1
+- package: go.uber.org/atomic
+  version: ^1.3.2

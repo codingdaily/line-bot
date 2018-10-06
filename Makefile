@@ -4,12 +4,14 @@ GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
+GOOS=linux
+GOARCH=amd64
 BINARY_NAME=ja-bot
 BINARY_UNIX=$(BINARY_NAME)_unix
 
 all: test build
 build: 
-		$(GOBUILD) -o $(BINARY_NAME) -v
+		$(GOBUILD) -o $(BINARY_NAME)-$(GOOS)-$(GOARCH) -v
 test: 
 		$(GOTEST) -v ./...
 clean: 
