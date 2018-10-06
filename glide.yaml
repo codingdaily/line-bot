@@ -1,0 +1,10 @@
+package: github.com/zkrhm/the-bot
+import:
+- package: github.com/mitchellh/go-homedir
+  version: ~1.0.0
+- package: github.com/spf13/cobra
+  version: ~0.0.3
+- package: github.com/spf13/viper
+  version: ~1.2.1
+- package: github.com/gorilla/mux
+  version: ^1.6.2
