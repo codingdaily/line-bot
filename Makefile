@@ -11,7 +11,8 @@ BINARY_UNIX=$(BINARY_NAME)_unix
 
 all: test build
 build: 
-		$(GOBUILD) -o $(BINARY_NAME)-$(GOOS)-$(GOARCH) -v
+		env GOOS=$(GOOS) GOARCH=$(GOARCH) $(GOBUILD) -o $(BINARY_NAME)-$(GOOS)-$(GOARCH) -v
+		env GOOS=darwin GOARCH=$(GOARCH) $(GOBUILD) -o $(BINARY_NAME)-darwin-$(GOARCH) -v
 test: 
 		$(GOTEST) -v ./...
 clean: 
