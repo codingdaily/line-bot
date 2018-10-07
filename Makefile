@@ -10,19 +10,21 @@ GOARCH=amd64
 BINARY_NAME=ja-bot
 BINARY_UNIX=$(BINARY_NAME)_unix
 
-all: test dist build
+all: test build dist
 dist:
 	[ -d $(DIST) ] || mkdir $(DIST)
+	cp *config.yaml $(DIST)/
+	mv $(BINARY_NAME)* $(DIST)/
 build: 
-		env GOOS=$(GOOS) GOARCH=$(GOARCH) $(GOBUILD) -o $(DIST)/$(BINARY_NAME)-$(GOOS)-$(GOARCH) -v
-		env GOOS=darwin GOARCH=$(GOARCH) $(GOBUILD) -o $(DIST)/$(BINARY_NAME)-darwin-$(GOARCH) -v
-		cp *config.yaml $(DIST)
+		# env GOOS=$(GOOS) GOARCH=$(GOARCH) $(GOBUILD) -o $(DIST)/$(BINARY_NAME)-$(GOOS)-$(GOARCH) -v
+		# env GOOS=darwin GOARCH=$(GOARCH) $(GOBUILD) -o $(DIST)/$(BINARY_NAME)-darwin-$(GOARCH) -v
+		gox -os="linux darwin" -arch="amd64" -verbose ./...
+		
 test: 
 		$(GOTEST) -v ./...
 clean: 
 		$(GOCLEAN)
-		rm -f $(BINARY_NAME)
-		rm -f $(BINARY_UNIX)
+		rm -f $(BINARY_NAME)*
 run:
 		$(GOBUILD) -o $(BINARY_NAME) -v ./...
 		./$(BINARY_NAME)

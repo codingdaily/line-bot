@@ -4,5 +4,5 @@ app:
   host: "0.0.0.0"
   port: 8000
 line:
-  channel-secret: ""
-  access-token: ""
+  channel-secret: "fb811c48c176a10ef4a6ad260714653a"
+  access-token: "sSmszQlIZlMFTZvM+eqUnQASmv250VtYKT6J0Ww+qJ/r7QF5DOez7TR24e1MOHEXPWOg1U2WgtYHmSf6upOeSXLyltVYIMrJeldYDB4N2d9l4gZX57inLk8orvh/o0OKl2HlYk6pJg9WQSnGsW0CiwdB04t89/1O/w1cDnyilFU="

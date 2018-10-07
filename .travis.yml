@@ -1,0 +1,29 @@
+language: go
+sudo: false
+matrix:
+  include:
+    - go: 1.10.x
+    - go: tip
+  allow_failures:
+    - go: tip
+
+before_install:
+  - go get github.com/mitchellh/gox
+install:
+  - glide install
+script:
+  - if [ "$LATEST" == "true" ]; then make ; fi
+
+deploy:
+  provider: release
+  skip_cleanup: true
+  api_key:
+    secure: 
+  file:
+    - dist/ja-bot_darwin_amd64
+    - dist/ja-bot_linux_amd64
+    - dist/jabot-config.yaml
+  on:
+    repo: codingdaily/line-bot
+    tags: true
+    condition: $LATEST = true
