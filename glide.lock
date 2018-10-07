@@ -1,5 +1,5 @@
-hash: 70b6ae786a728d314efc0919600f551838b31b3d9c88d265d32e229035d9d485
-updated: 2018-10-07T00:10:39.267863+07:00
+hash: 51107d97d8875a98d6899c730cd186c3d999568b601dd293a1bf8cb76e7d5109
+updated: 2018-10-07T10:32:20.923105+07:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: ccc981bf80385c528a65fbfdd49bf2d8da22aa23
@@ -21,6 +21,10 @@ imports:
   - json/token
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/line/line-bot-sdk-go
+  version: d787aef1744dc11dbde0fac149e6fbbdbe29d3d6
+  subpackages:
+  - linebot
 - name: github.com/magiconair/properties
   version: c2353362d570a7bfa228149c62842019201cfb71
 - name: github.com/mitchellh/go-homedir

@@ -33,8 +33,10 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("serve called")
-		app := app.NewApp()
-		app.Run(":8000")
+		cfg := app.NewAppConfig()
+
+		app := app.NewApp(cfg)
+		app.Run(cfg.Address)
 	},
 }
 

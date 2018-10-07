@@ -77,7 +77,10 @@ func initConfig() {
 
 		// Search config in home directory with name ".the-bot" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".the-bot")
+		viper.AddConfigPath(".")
+		viper.AddConfigPath("/etc/jobagency-bot/")
+		viper.SetConfigType("yaml")
+		viper.SetConfigName("jabot-config")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
