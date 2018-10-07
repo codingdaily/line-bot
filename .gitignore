@@ -1,4 +1,5 @@
 vendor
 ja-bot
 dist
-.jabot-config.yaml
+.jabot-config.secured.yaml
+jabot-config.yaml.backup
