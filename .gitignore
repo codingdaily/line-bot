@@ -1,3 +1,4 @@
 vendor
 ja-bot
 dist
+.jabot-config.yaml
